@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  backend:
+    build: ./backend #path to the backend dockerfile
+    dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    depends_on:
+      -backend
+
+  frontend:
+    build: ./client
+    docker: Dockerfile
+    ports:
+     - "3000:3000"
+    environment:
+      - NODE_ENV=development
