@@ -11,7 +11,7 @@ COPY package*.json ./
 RUN npm install
 
 #copy backend code
-COPY /home/joanchege/dev/code/IP2/yolo/backend/ .
+COPY backend/ .
 
 #expose the backend port
 EXPOSE 5000
