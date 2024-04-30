@@ -1,17 +1,14 @@
-version: "3"
+version: "3.8"
 
 services:
   backend:
     build: ./backend #path to the backend dockerfile
-    dockerfile: Dockerfile
     ports:
       - "5000:5000"
-    depends_on:
-      -backend
+
 
   frontend:
-    build: ./client
-    docker: Dockerfile
+    build: ./client #path to the client dockerfile
     ports:
      - "3000:3000"
     environment:
