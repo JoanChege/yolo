@@ -2,14 +2,13 @@ version: "3.8"
 
 services:
   backend:
-    build: ./backend #path to the backend dockerfile
+    image: joanchege/backendyolo-image:latest  # Assuming backend image exists
     ports:
-      - "5000:5000"
-
-
-  frontend:
-    build: ./client #path to the client dockerfile
+     - "5000:5000"
+     
+  client:
+    image: joanchege/clientyolo-image:latest  # Use the pre-built image
     ports:
-     - "3000:3000"
+      - "3000:3000"
     environment:
       - NODE_ENV=development

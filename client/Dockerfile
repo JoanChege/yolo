@@ -1,23 +1,23 @@
-#use lightweight node.js base image
-FROM node:alpine AS builder
+# Use lightweight node.js base image
+FROM node:alpine
 
-#create a working directory within the container
+# Create a working directory within the container
 WORKDIR /app
 
-#copy the package.json
+# Copy the package.json
 COPY package*.json ./
 
-#install dependencies
+# Install dependencies
 RUN npm install
 
-#copy client code
-#COPY . .
+# Copy client code
+COPY . .
 
-#expose the client port
+# Expose the client port
 EXPOSE 3000
 
-#mount the development directory as a volume
-VOLUME [/"app"]
+# Mount the development directory as a volume
+#VOLUME [/"app"]
 
-#specify the run command which starts app
+# Specify the run command which starts app
 CMD ["npm", "start"]
