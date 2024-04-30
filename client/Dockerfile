@@ -1,5 +1,5 @@
 #use lightweight node.js base image
-FROM node:alpine
+FROM node:alpine AS builder
 
 #create a working directory within the container
 WORKDIR /app
@@ -10,11 +10,14 @@ COPY package*.json ./
 #install dependencies
 RUN npm install
 
-#copy backend code
-COPY . .
+#copy client code
+#COPY . .
 
-#expose the backend port
-EXPOSE 5000
+#expose the client port
+EXPOSE 3000
+
+#mount the development directory as a volume
+VOLUME [/"app"]
 
 #specify the run command which starts app
 CMD ["npm", "start"]
