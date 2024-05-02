@@ -2,13 +2,17 @@ version: "3.8"
 
 services:
   backend:
-    image: joanchege/backendyolo-image:latest  # Assuming backend image exists
+    build: ./backend  # Path to the backend Dockerfile directory
     ports:
-     - "5000:5000"
-     
+      - "5000:5000"
+    volumes:
+      - ./backend:/app
+
   client:
-    image: joanchege/clientyolo-image:latest  # Use the pre-built image
+    build: ./client  # Path to the client Dockerfile directory
     ports:
       - "3000:3000"
     environment:
       - NODE_ENV=development
+    volumes:
+      - ./client:/app
