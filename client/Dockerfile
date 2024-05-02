@@ -16,8 +16,6 @@ COPY . .
 # Expose the client port
 EXPOSE 3000
 
-# Mount the development directory as a volume
-#VOLUME [/"app"]
 
 # Specify the run command which starts app
 CMD ["npm", "start"]
