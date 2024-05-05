@@ -17,4 +17,4 @@ services:
     environment:
       - NODE_ENV=development
     volumes:
-      - ./client:/app
+     - ./client:/app
