@@ -2,14 +2,16 @@ version: "3.8"
 
 services:
   backend:
-    build: ./backend  # Path to the backend Dockerfile directory
+    #build: ./backend  # Path to the backend Dockerfile directory
+    image: joanchege/backend-image:v1.0.0
     ports:
       - "5000:5000"
     volumes:
       - ./backend:/app
 
   client:
-    build: ./client  # Path to the client Dockerfile directory
+    #build: ./client  # Path to the client Dockerfile directory
+    image: joanchege/client-image:v2.0.0
     ports:
       - "3000:3000"
     environment:
