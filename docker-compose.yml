@@ -11,7 +11,7 @@ services:
 
   client:
     #build: ./client  # Path to the client Dockerfile directory
-    image: joanchege/client-image:v2.0.0
+    image: joanchege/client-image:v3.0.0
     ports:
       - "3000:3000"
     environment:
