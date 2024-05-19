@@ -16,4 +16,10 @@
    - role: client
    - role: backend
 
-  
+  tasks:
+  - name: Clone code form Github
+    git: 
+      repo: https://github.com/JoanChege/yolo.git
+
+
+ 
