@@ -1,0 +1,15 @@
+- hosts: vagrant
+  become: true
+  var_files:
+    - vars/playbook.yml
+
+  pre_tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Upgrade packages
+      apt:
+        upgrade: yes
+
+ 
