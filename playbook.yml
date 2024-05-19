@@ -12,4 +12,8 @@
       apt:
         upgrade: yes
 
- 
+  roles:
+   - role: client
+   - role: backend
+
+  
