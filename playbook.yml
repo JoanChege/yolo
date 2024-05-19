@@ -20,6 +20,7 @@
   - name: Clone code form Github
     git: 
       repo: https://github.com/JoanChege/yolo.git
+      dest: /home/joanchege/dev/code/IP2/yolo/clone
 
  - name: Build Client Docker image
     docker_image:
