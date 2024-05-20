@@ -3,3 +3,65 @@
 
 [all:vars]
 ansible_user=vagrant
+
+
+
+
+  roles:
+   - role: client
+   - role: backend
+
+  tasks:
+  - name: Clone code form Github
+    git: 
+      repo: https://github.com/JoanChege/yolo.git
+      dest: /home/joanchege/dev/code/IP2/yolo/clone
+
+ - name: Build Client Docker image
+    docker_image:
+        name: "joanchege/client-image:v3.0.0"
+        source: build
+        build: 
+          path: "./client"
+          dockerfile: Dockerfile
+        force_source: yes
+    tags:
+      - client
+
+  - name: Run client container
+    docker_container:
+      name: "joanchege/client-image:v3.0.0"
+      image: "joanchege/client-image:v3.0.0"
+      ports:
+        - "3000:3000"
+      env:
+        NODE_ENV: production
+      restart_policy: unless-stopped
+    tags:
+      - client
+
+   - name: Build Backend Docker image
+     docker_image:
+          name: "joanchege/backend-image:v1.0.0"
+          source: build
+          build: 
+            path: "./backend"
+            dockerfile: Dockerfile
+          force_source: yes
+      tags:
+        - backend
+
+  - name: Run backend container
+    docker_container:
+      name: "joanchege/backend-image:v1.0.0"
+      image: "joanchege/backend-image:v1.0.0"
+      ports:
+        - "5000:5000"
+      env:
+        NODE_ENV: production
+      restart_policy: unless-stopped
+    tags:
+      - frontend
+
+
+ 
