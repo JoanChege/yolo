@@ -55,3 +55,15 @@
         state: present
     tags:
       - backend
+
+  - name: Run backend container
+    docker_container:
+      name: backend
+      image: backend
+      ports:
+        - "5000:5000"
+      env:
+        NODE_ENV: production
+      restart_policy: unless-stopped
+    tags:
+      - backend
