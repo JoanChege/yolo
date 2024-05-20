@@ -46,3 +46,12 @@
     tags:
       - client
 
+  - name: Build Backend Docker image
+    docker_image:
+        name: backend
+        source: build
+        build: 
+          path: /home/joanchege/dev/code/IP2/yolo/yolo_clone/backend
+        state: present
+    tags:
+      - backend
