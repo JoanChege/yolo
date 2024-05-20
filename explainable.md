@@ -7,6 +7,7 @@ Update apt cache: This task makes use of the apt module, with the update_cache o
 Upgrade packages: This task makes use of the apt module again, but this time with the upgrade option set to yes. This initiates the update of any existing packages on the target machines.
 
 tasks:
-The first task is to clone the github repo and set a destination
-the second task is to start docker service
-the third task is to build the client docker image
+1. clone the github repo and set a destination
+2. start docker service
+3. build the client docker image
+4. run the built client container
