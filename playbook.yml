@@ -21,3 +21,20 @@
       repo: https://github.com/JoanChege/yolo.git
       dest: /home/joanchege/dev/code/IP2/yolo/clone
 
+  - name: Start Docker Service
+    become: yes
+    service: 
+      name: docker
+      state: started
+
+  - name: Build Client Docker image
+    docker_image:
+        name: "joanchege/client-image:v3.0.0"
+        source: build
+        build: 
+          path: "/home/joanchege/dev/code/IP2/yolo/client"
+          dockerfile: Dockerfile
+        force_source: yes
+    tags:
+      - client
+
