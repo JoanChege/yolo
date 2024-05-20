@@ -29,12 +29,13 @@
 
   - name: Build Client Docker image
     docker_image:
-        name: "joanchege/client-image:v3.0.0"
+        name: "client"
         source: build
         build: 
           path: "/home/joanchege/dev/code/IP2/yolo/client"
           dockerfile: Dockerfile
         force_source: yes
+        state: present
     tags:
       - client
 
