@@ -1,2 +1,5 @@
-[vagrant]
+[ipserver]
 127.0.0.1 ansible_ssh_port=2200 ansible_ssh_private_key_file=/home/joanchege/dev/code/IP2/yolo/.vagrant/machines/default/virtualbox/private_key
+
+[all:vars]
+ansible_user=vagrant
