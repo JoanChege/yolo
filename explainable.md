@@ -11,3 +11,5 @@ tasks:
 2. start docker service
 3. build the client docker image
 4. run the built client container
+5. build the backend docker image
+6. run the built backend image
