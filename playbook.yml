@@ -11,9 +11,6 @@
       apt:
         upgrade: yes
 
-  roles:
-  - role: client
-  - role: backend
 
   tasks:
   - name: Clone code from GitHub
