@@ -19,7 +19,7 @@
   - name: Clone code from GitHub
     git: 
       repo: https://github.com/JoanChege/yolo.git
-      dest: /home/joanchege/dev/code/IP2/yolo/clone
+      dest: /home/joanchege/dev/code/IP2/yolo/yolo_clone
 
   - name: Start Docker Service
     become: yes
@@ -29,12 +29,10 @@
 
   - name: Build Client Docker image
     docker_image:
-        name: "client"
+        name: client
         source: build
         build: 
-          path: "/home/joanchege/dev/code/IP2/yolo/client"
-          dockerfile: Dockerfile
-        force_source: yes
+          path: /home/joanchege/dev/code/IP2/yolo/yolo_clone/client
         state: present
     tags:
       - client
