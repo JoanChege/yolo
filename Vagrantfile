@@ -14,9 +14,9 @@ Vagrant.configure("2") do |config|
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "ubuntu/jammy64"
 
-  config.vm.provision "ansible", compatibility_mode: 'auto' do |ansible|
-    ansible.playbook = "./playbook.yml"
-  end
+  #config.vm.provision "ansible", compatibility_mode: 'auto' do |ansible|
+   # ansible.playbook = "./playbook.yml"
+  #end
   
   
 
