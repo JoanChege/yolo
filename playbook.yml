@@ -16,4 +16,8 @@
   - role: backend
 
   tasks:
+  - name: Clone code from GitHub
+    git: 
+      repo: https://github.com/JoanChege/yolo.git
+      dest: /home/joanchege/dev/code/IP2/yolo/clone
 
