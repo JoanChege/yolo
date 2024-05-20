@@ -34,3 +34,15 @@
     tags:
       - client
 
+  - name: Run client container
+    docker_container:
+      name: client
+      image: client
+      ports:
+        - "3000:3000"
+      env:
+        NODE_ENV: production
+      restart_policy: unless-stopped
+    tags:
+      - client
+
