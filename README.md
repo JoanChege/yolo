@@ -56,3 +56,5 @@ deploy the application's backend and client deployment and service yaml files
 
 ### rename yaml files
 rename service and deployment yaml files for backend and client
+
+add loadbalancer to the service yaml files
