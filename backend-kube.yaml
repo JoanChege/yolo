@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: backend
 spec:
   selector:
     matchLabels:
-      app: client
+      app: backend
   template:
     metadata:
       labels:
-        app: client
+        app: backend
     spec:
       containers:
-      - name: client
-        image: us-central1-docker.pkg.dev/ambient-nuance-423310-p3/client-repo/client-image:v3.0.0
+      - name: backend
+        image: <Image>
         resources:
           limits:
             memory: "128Mi"
             cpu: "500m"
         ports:
-        - containerPort: 3000
+        - containerPort: 5000
