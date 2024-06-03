@@ -13,3 +13,5 @@ tasks:
 4. run the built client container
 5. build the backend docker image
 6. run the built backend image
+
+PUSH THE IMAGES TO A GOOGLE ARTIFACT REGISTRY
