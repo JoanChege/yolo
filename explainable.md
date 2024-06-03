@@ -18,4 +18,13 @@ PUSH THE IMAGES TO A GOOGLE ARTIFACT REGISTRY
 
 CREATE KUBE DEPLOYMENTS FOR BACKEND AND CLIENT SIDE
 
-CREATE KUBE SERVICE FOR BOTH BACKEND AND CLIENT SIDE
+CREATE KUBE SERVICE FOR BOTH BACKEND AND CLIENT
+
+### CONNECT TO GCLOUD and GKE
+install the gcloud settings
+initialize gcloud, connect to account with billing
+choose project in gcloud
+create GKE cluster
+run the commant to fetch and set up your authenitication credentials for the GKE cluster
+verify kubectl is configured to communicate with cluster
+deploy the application's backend and client deployment and service yaml files
