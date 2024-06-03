@@ -58,3 +58,7 @@ deploy the application's backend and client deployment and service yaml files
 rename service and deployment yaml files for backend and client
 
 add loadbalancer to the service yaml files
+
+## URL 
+CLIENT:https://34.71.250.187/
+BACKEND:https://34.123.219.149:5000
