@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: client
-        image: us-central1-docker.pkg.dev/ambient-nuance-423310-p3/client-repo/client-image:v3.0.0
+        image: us-central1-docker.pkg.dev/ambient-nuance-423310-p3/client-repo/client-image
         resources:
           limits:
             memory: "128Mi"
