@@ -19,7 +19,7 @@
       dest: /home/joanchege/dev/code/IP2/yolo/yolo_clone
 
   - name: Start Docker Service
-    become: yes
+    become: true
     service: 
       name: docker
       state: started
