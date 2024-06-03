@@ -28,3 +28,7 @@ create GKE cluster
 run the commant to fetch and set up your authenitication credentials for the GKE cluster
 verify kubectl is configured to communicate with cluster
 deploy the application's backend and client deployment and service yaml files
+
+
+### rename yaml files
+rename service and deployment yaml files for backend and client
